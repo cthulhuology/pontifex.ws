@@ -1,7 +1,7 @@
-pontifex.http
-============
+pontifex.ws
+===========
 
-A HTTP to AMQP Bridge
+A WebSocket to AMQP Bridge
 
 Getting Started
 ---------------

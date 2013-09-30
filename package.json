@@ -10,7 +10,7 @@
 	"main": "./lib/Pontifex.WebSocket.coffee",
 	"bin": {},
 	"dependencies": {
-		"pontifex" : "0.0.2",
+		"pontifex" : "0.0.3",
 		"ws" : "0.4.31"
 	},
 	"devDependencies": {},
