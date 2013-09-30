@@ -1,0 +1,22 @@
+{
+	"author": "David Goehrig",
+	"name": "pontifex.ws",
+	"license" : "MIT",
+	"description": "WebSocket to AMQP bridge",
+	"version": "0.0.1",
+	"repository": {
+		"url": "http://github.com/cthulhuology/pontifex.ws"
+	},
+	"main": "./lib/Pontifex.WebSocket.coffee",
+	"bin": {},
+	"dependencies": {
+		"pontifex" : "0.0.2",
+		"ws" : "0.4.31"
+	},
+	"devDependencies": {},
+	"optionalDependencies": {},
+	"engines": {
+		"node": "*",
+		"coffee": "*"
+	}
+}
