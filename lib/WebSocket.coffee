@@ -11,6 +11,8 @@ WebSocket = (Bridge,Url) =>
 		console.log url
 		[ domain, exchange, key, queue, dest, path ] = url.replace("%23","#").replace("%2a","*").
 			match(////([^\/]*)/([^\/]*)/([^\/]*)/([^\/]*)/([^\/]*)/([^\/]*)///)[1...]
+		dest ?= exchange
+		path ?= key
 		socket.on "message", (message) ->
 			try
 				json = JSON.parse(message)
