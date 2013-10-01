@@ -3,11 +3,11 @@
 	"name": "pontifex.ws",
 	"license" : "MIT",
 	"description": "WebSocket to AMQP bridge",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"repository": {
 		"url": "http://github.com/cthulhuology/pontifex.ws"
 	},
-	"main": "./lib/Pontifex.WebSocket.coffee",
+	"main": "./lib/WebSocket.coffee",
 	"bin": {},
 	"dependencies": {
 		"pontifex" : "0.0.3",
@@ -16,7 +16,6 @@
 	"devDependencies": {},
 	"optionalDependencies": {},
 	"engines": {
-		"node": "*",
-		"coffee": "*"
+		"node": "*"
 	}
 }
