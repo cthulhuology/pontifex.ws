@@ -21,12 +21,14 @@ WebSocket = (Bridge,Url) =>
 					self["*"]?.apply(self,[socket].concat(json))
 			catch error
 				console.log error
+		socket.on "close", () ->
+			Bridge.unsubscribe queue, socket
 		Bridge.connect domain, () ->
 			if exchange and key and queue
 				console.log "Creating #{exchange}/#{key} -> #{queue }"
 				Bridge.route exchange, key, queue
 				console.log "Subscribing #{queue }"
-				Bridge.subscribe queue, (data) ->
+				Bridge.subscribe queue, socket, (data) ->
 					socket.send data
 		self["*"] = (socket,message...) ->
 			console.log "Sending #{ JSON.stringify(message) } ->  #{dest}/#{path}"
