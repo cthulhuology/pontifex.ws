@@ -15,6 +15,7 @@ WebSocket = (Bridge,Url) =>
 		path ?= key
 		socket.on "message", (message) ->
 			try
+				console.log "incoming : ", message
 				json = JSON.parse(message)
 				self[json[0]]?.apply(self,[socket].concat(json[1...]))
 				if not self[json[0]]	# handle does not understand case
