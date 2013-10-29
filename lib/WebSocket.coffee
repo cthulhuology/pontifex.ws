@@ -7,7 +7,8 @@ WebSocket = (Bridge,Url) =>
 	self = this
 	[ proto, host, port] = Url.match(///([^:]+)://([^:]+):(\d+)///)[1...]
 	self.server = new ws.Server port: port, host: host
-	self.server.on 'connection', (socket, url) ->
+	self.server.on 'connection', (socket) ->
+		url = socket.upgradeReq.url
 		[ domain, exchange, key, queue, dest, path ] = url.replace("%23","#").replace("%2a","*").
 			match(////([^\/]*)/([^\/]*)/([^\/]*)/([^\/]*)/([^\/]*)/([^\/]*)///)[1...]
 		dest ?= exchange
