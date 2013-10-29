@@ -3,7 +3,7 @@
 	"name": "pontifex.ws",
 	"license" : "MIT",
 	"description": "WebSocket to AMQP bridge",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"repository": {
 		"url": "http://github.com/cthulhuology/pontifex.ws"
 	},
